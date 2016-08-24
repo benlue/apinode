@@ -1,0 +1,57 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "不需識別碼。"
+	},
+	"url": "admin/app/info",
+	"descTx": {
+		"en": "",
+		"zh": "傳回當前使用的 App 詳細資訊。"
+	},
+	"query": [
+	],
+	"out": [
+		{
+			"key": "appCode",
+			"descTx": {
+				"en": "App code.",
+				"zh": "應用程式代碼"
+			}
+		},
+		{
+			"key": "appKey",
+			"descTx": {
+				"en": "App key.",
+				"zh": "應用程式金鑰"
+			}
+		},
+		{
+			"key": "title",
+			"descTx": {
+				"en": "Title",
+				"zh": "應用程式標題。"
+			}
+		},
+		{
+			"key": "descTx",
+			"descTx": {
+				"en": "",
+				"zh": "應用程式說明。"
+			}
+		},
+		{
+			"key": "isExt",
+			"descTx": {
+				"en": "",
+				"zh": "應用程式是否為第三方應用。 1表示為第三方應用，否則為0。"
+			}
+		},
+		{
+			"key": "locID",
+			"descTx": {
+				"en": "",
+				"zh": "應用程式的預設語系識別碼。"
+			}
+		}
+	]
+}

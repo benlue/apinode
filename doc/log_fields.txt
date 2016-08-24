@@ -1,0 +1,11 @@
+Output log will contain the following properties:
+
+	. userID
+	. c_ip: client ip or device ID (for tablet / mobile devices)
+	. c_type: client type, possible values are pc, tablet or mobile
+	. c_agent: client agent.
+	. caID: the app ID
+	. dsID: the data source ID
+	. ep: endpoint
+	. code: the result code
+	. time: the request issue time

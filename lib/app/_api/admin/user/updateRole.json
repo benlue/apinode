@@ -1,0 +1,24 @@
+{
+	"id": {
+		"en": "Web user identifier. Required.", 
+		"zh": "userID，使用者識別碼。"
+	},
+	"url": "admin/user/updateRole/[userID]",
+	"descTx": {
+		"en": "",
+		"zh": "更改使用者權限。無法修改自己的權限或權限大於自己的使用者。也無法將使用者權限調整的比自己的還大。"
+	},
+	"query": [
+    	{
+			"key": "roleID",
+         	"descTx": {
+				"en": "", 
+        	 	"zh": "新的權限識別碼。 權限由大至小依序為  3:管理者、4:應用程式操作員、5:進階會員、6:一般會員、7:訪客。"
+			}
+		}
+	],
+    "out": {
+		"en": "No output value.", 
+		"zh": "沒有輸出值"
+	}
+}

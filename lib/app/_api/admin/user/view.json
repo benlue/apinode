@@ -1,0 +1,112 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "不需識別碼。"
+	},
+	"url": "admin/user/view",
+	"descTx": {
+		"en": "Display the user info.",
+		"zh": "顯示使用者的詳細資訊。"
+	},
+	"query": [],
+	"out": [
+		{
+			"key": "userID",
+		 	"descTx": {
+				"en": "User ID", 
+		     	"zh": "使用者識別碼"
+			}
+		},
+		{
+			"key": "iconURI",
+		 	"descTx": {
+				"en": "Link to the user profile picture.",
+			   	"zh": "使用者大頭貼的網址。如果回傳的是全路徑（包含http），表示大頭貼儲存在其他的網站上，不可用 @admin/user/icon 讀取。"
+			}
+		},
+		{
+			"key": "accName", 
+	     	"descTx": {
+				"en": "Account name.", 
+	       	 	"zh": "帳號名稱。"
+			}
+		},
+		{
+			"key": "dspName", 
+	     	"descTx": {
+				"en": "NickName.", 
+	       	 	"zh": "使用者暱稱。"
+			}
+		},
+	 	{
+			"key": "nid",
+		 	"descTx": {
+				 "en": "ID", 
+			     "zh": "使用者身分證號碼。"
+			}
+		},
+		{
+			"key": "fname", 
+	     	"descTx": {
+				"en": "First name.", 
+	        	"zh": "使用者名。"
+			}
+		},
+ 		{
+			"key": "lname", 
+	     	"descTx": {
+				"en": "Last name.", 
+	        	"zh": "使用者姓。"
+			}
+		},
+	 	{
+			"key": "dob", 
+	     	"descTx": {
+				 "en": "Date of birth.", 
+	        	 "zh": "使用者出生年月日。請以西元輸入。"
+			}
+		},
+ 		{
+			"key": "gender", 
+	     	"descTx": {
+				 "en": "Gender.1: Male. 0: Female. 2: Others.", 
+	        	 "zh": "使用者性別。1表男性，0表女性，2表其他。"
+			}
+		},
+	 	{
+			"key": "email", 
+	     	"descTx": {
+				 "en": "E-mail.", 
+	        	 "zh": "使用者電子郵件帳號。"
+			}
+		},
+ 		{
+			"key": "mobile", 
+	     	"descTx": {
+				 "en": "Mobile number.", 
+	        	 "zh": "使用者行動電話號碼。"
+			}
+		},
+   	 	{
+			"key": "addr", 
+  		 	"descTx": {
+				"en": "User address.", 
+  		        "zh": "使用者地址。"
+			}
+		},
+		{
+			"key": "fbUserID", 
+  		 	"descTx": {
+				"en": "User address.", 
+  		        "zh": "臉書的使用者 ID。如果使用者以臉書帳號登入才會有此欄位。"
+			}
+		},
+     	{
+			"key": "aux", 
+		 	"descTx": {
+				 "en": "Any additional information. Should be formatted as a JSON string.", 
+				 "zh": "任何附加的資訊，以json格式表示"
+			}
+		}
+	]
+}

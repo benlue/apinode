@@ -1,0 +1,73 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "不需識別碼。"
+	},
+	"url": "admin/user/verifyExt",
+	"descTx": {
+		"en": "",
+		"zh": "驗證是否為第三方 App 的會員帳號。只有第三方App才能使用此功能。若驗證成功則回傳token。***此API為內部使用，不公開。由coserv串接使用。***"
+	},
+	"query": [
+		{
+			"key": "accName",
+			"descTx": {
+				"zh": "第三方會員的帳號，必要。"
+			},
+			"required": true
+		},
+		{
+			"key": "secret",
+			"descTx": {
+				"zh": "會員驗證碼，必要。"
+			},
+			"required": true
+		},
+		{
+			"key": "url",
+			"descTx": {
+				"zh": "驗證API，必要。 (由coserv提供)"
+			},
+			"required": true
+		}
+	],
+	"out": [
+		{
+			"key": "isValid",
+			"descTx": {
+				"en": "",
+				"zh": "0表示該帳號無效(不存在)或是會員驗證碼有誤，1表示該帳號正確並將回傳使用者的 token。"
+			}
+		},
+		{
+			"key": "userID",
+			"descTx": {
+				"en": "The user ID",
+				"zh": "使用者識別碼。"
+			}
+		},
+		{
+			"key": "dspName",
+			"descTx": {
+				"en": "Nickname or the display name of the login user.",
+				"zh": "使用者膩稱"
+			}
+		}
+	],
+	"token": [
+		{
+			"key": "token",
+			"descTx": {
+				"en": "",
+				"zh": "存取密鑰 (access token)。每個 request 都需要提出有效的存取密鑰才會被准許執行。"
+			}
+		},
+		{
+			"key": "validTo",
+			"descTx": {
+				"en": "A timestamp (in milliseconds) to show the experiation time of the token.",
+				"zh": "一個 timestamp 記錄存取密鑰的失效時間。"
+			}
+		}
+	]
+}

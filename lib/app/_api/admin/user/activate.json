@@ -1,0 +1,13 @@
+{
+	"id": {
+		"en": "Account acivation code. Required.Activation code is returned when users have registered successfully.", 
+		"zh": "帳號驗證碼，必要欄位。當使用者註冊成功時，API 會回傳帳號驗證碼。"
+	},
+	"url": "admin/user/activate/[actCode]",
+	"descTx": {
+		"en": "After registration, users still have to activate their account with the activation code.",
+		"zh": "使用者註冊完成後，需要用驗證碼啟動帳號。認證碼可由 email 或簡訊送達使用者。若是由簡訊傳送認證碼，實際的認證碼為：簡訊認證碼@使用者手機號碼。例如：2875@09xxxxxxxx。"
+	},
+	"query": [],
+	"out": []
+}

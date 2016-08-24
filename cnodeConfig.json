@@ -1,0 +1,28 @@
+{
+	"db": [
+		{
+			"dbConfig": {
+				"host": "127.0.0.1",
+				"database": "cnode",
+				"user": "root",
+				"password": "root",
+				"supportBigNumbers" : true,
+				"connectionLimit"   : 32
+			}
+		},
+		{
+			"dbConfig": {
+				"host": "127.0.0.1",
+				"database": "coimLog",
+				"user": "root",
+				"password": "root",
+				"supportBigNumbers" : true,
+				"connectionLimit"   : 32
+			}
+		}
+	],
+	 "appPath": "/Users/ben/proj/yr105/ws_his/everan_his/lib/app",
+	 "fileRoot": "/Users/ben/Documents/projMedia/2016/his",
+	 "logDir": "/Users/ben/proj/yr105/log/his",
+	 "elasServer": "http://127.0.0.1:9200"
+}

@@ -1,0 +1,30 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "不需識別碼。"
+	},
+	"url": "admin/user/accNameOk",
+	"descTx": {
+		"en": "Check to see if an account name is available.",
+		"zh": "查詢某個帳號是否可被使用。"
+	},
+	"query": [
+		{
+			"key": "accName",
+			"descTx": {
+				"zh": "所要查詢的帳號",
+				"en": "The account name to be verified."
+			},
+			"required": true
+		}
+	],
+	"out": [
+		{
+			"key": "isOk",
+		 	"descTx": {
+				"en": "If true, the account name is available. Otherwise, it has been used.",
+			   	"zh": "true 表示所查詢的帳號可以使用，否則表示已被他人使用。"
+			}
+		}
+	]
+}

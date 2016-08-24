@@ -1,0 +1,109 @@
+設定 index 別名
+curl -XPOST 'http://localhost:9200/_aliases' -d '
+{
+    "actions" : [
+        { "add" : { "index" : "log_01", "alias" : "log" } }
+    ]
+}'
+
+POST _aliases
+{
+    "actions" : [
+        { "add" : { "index" : "log_01", "alias" : "log" } }
+    ]
+}
+
+建立 index 以及其設定值
+PUT /log_01/
+{
+  "settings" : {
+  	"analysis" : {
+  	    "filter": {
+          "zh_shingle_filter": {
+            "type": "shingle",
+            "min_shingle_size": 1, 
+            "max_shingle_size": 1
+          }
+        },
+        "analyzer" : {
+        	"default": {
+            	"tokenizer": "smartcn_sentence",
+        	    "filter" : ["smartcn_word", " html_strip", "zh_shingle_filter"],
+            	"type": "smartcn"
+        	}
+        }
+    }
+  }
+}
+
+PUT /log_01/cnode/_mapping
+{
+	"cnode" : {
+		"properties" : {
+			"caID" : {
+				"type" : "long",
+				"index" : "not_analyzed"
+			},
+			"dsID" : {
+				"type" : "long",
+				"index" : "not_analyzed"
+			},
+			"ep" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"app" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"rs" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"op" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"id" : {
+				"type" : "long",
+				"index" : "not_analyzed"
+			},
+			"c_ip" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"c_type" : {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"c_agent": {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"time": {
+				"type" : "date",
+				"index" : "not_analyzed"
+			},
+			"userID": {
+				"type" : "long",
+				"index" : "not_analyzed"
+			},
+			"isGuest": {
+				"type" : "boolean",
+				"index" : "not_analyzed"
+			},
+			"token": {
+				"type" : "string",
+				"index" : "not_analyzed"
+			},
+			"code": {
+				"type" : "long",
+				"index" : "not_analyzed"
+			},
+			"_source": {
+				"type" : "string",
+				"index" : "not_analyzed"
+			}
+		}
+	}
+}

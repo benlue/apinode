@@ -1,0 +1,29 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": "admin/token/request",
+	"descTx": {
+		"en": "",
+		"zh": "向 COIMOTION 要求取得存取密鑰 (access token)。呼叫此 API 不需提供任何參數，但必須在 http header 中傳送應用程式的金鑰 (app key)。"
+	},
+	"query": [],
+	"out": [],
+	"token": [
+		{
+			"key": "token",
+			"descTx": {
+				"en": "",
+				"zh": "存取密鑰 (access token)。每個 request 都需要提出有效的存取密鑰才會被准許執行。"
+			}
+		},
+		{
+			"key": "validTo",
+			"descTx": {
+				"en": "A timestamp (in milliseconds) to show the experiation time of the token.",
+				"zh": "一個 timestamp 記錄存取密鑰的失效時間。"
+			}
+		}
+	]
+}

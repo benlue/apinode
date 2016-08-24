@@ -1,0 +1,23 @@
+User profile contains the following properties:
+.psnID
+.userID
+.roleID
+.token
+.isGuest
+
+rt has the following properties:
+.req
+.uPro
+.inData
+.app
+.ep
+	.app
+	.caID
+	.rs
+	.op
+	.id
+	.ds
+		.ds
+		.dsID
+		.readable
+		.writable

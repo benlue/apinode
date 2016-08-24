@@ -1,0 +1,92 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": "admin/user/update",
+	"descTx": {
+		"en": "Modify User info. Changeable fields can be refered to the description in 'Enter Parameter'.",
+		"zh": "設定使用者的基本資料。可異動的欄位請參考「輸入參數」的說明。"
+	},
+	"query": [
+		{
+			"key": "dspName", 
+	     	"descTx": {
+				"en": "NickName.", 
+	       	 	"zh": "使用者暱稱。"
+			}
+		},
+ 		{
+			"key": "fname", 
+	     	"descTx": {
+				"en": "First name.", 
+	        	"zh": "使用者名。"
+			}
+		},
+ 		{
+			"key": "lname", 
+	     	"descTx": {
+				"en": "Last name.", 
+	        	"zh": "使用者姓。"
+			}
+		},
+ 		{
+			"key": "nid", 
+	     	"descTx": {
+				"en": "ID", 
+	        	"zh": "使用者身分證號碼。"
+			}
+		},
+ 		{
+			"key": "dob", 
+	     	"descTx": {
+				 "en": "Date of birth.", 
+	        	 "zh": "使用者出生年月日。請以西元輸入。"
+			}
+		},
+ 		{
+			"key": "gender", 
+	     	"descTx": {
+				 "en": "Gender.1: Male. 0: Female. 2: Others.", 
+	        	 "zh": "使用者性別。1表男性，0表女性，2表其他。"
+			}
+		},
+	 	{
+			"key": "email", 
+	     	"descTx": {
+				 "en": "E-mail.", 
+	        	 "zh": "使用者電子郵件帳號。"
+			}
+		},
+ 		{
+			"key": "mobile", 
+	     	"descTx": {
+				 "en": "Mobile number.", 
+	        	 "zh": "使用者行動電話號碼。"
+			}
+		},
+   	 	{
+			"key": "addr", 
+  		 	"descTx": {
+				"en": "User address.", 
+  		        "zh": "使用者地址。"
+			}
+		},
+    	{
+			"key": "aux", 
+		 	"descTx": {
+				 "en": "Any additional information. Should be formatted as a JSON string.", 
+				 "zh": "任何附加的資訊，必須以json格式表示"
+			}
+		}
+	],
+	"out": [
+		{
+			"key": "id", 
+			"descTx": {
+				"en": "Category identifier.", 
+				"zh": "userID. 使用者識別碼。"
+			}
+		}
+	]
+}

@@ -1,0 +1,131 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": "admin/user/convertTemp",
+	"descTx": {
+		"en": "User application. When a new account is created, developers can collect the following information (in the query). Only account and password are the required information. Developers should proactively protect the personal information and privacy when collecting the information. If the account has already been activated, the system will allow users login simultaneously, and returning a token.",
+		"zh": "將臨時帳號轉換為正式帳號。如果轉換為正式帳號需要驗證，則舊有的 token 將會失效。"
+	},
+	"query": [
+        {
+			"key": "accName", 
+         	"descTx": {
+				"en": "Account. Required.", 
+        	 	"zh": "使用者帳號。必要參數。帳號有三種可能類型：email, 手機號碼以及傳統的帳號。可在應用程式管理介面設定。email 或手機類型時，程式會自動將資料複製到相關欄位（email或手機欄位）"
+			},
+			"required": true
+		},
+ 		{
+			"key": "passwd", 
+	     	"descTx": {
+				"en": "Password. Required. The client side has to hash & salt the password before sending it out.", 
+	        	"zh": "使用者密碼。必要參數。子端程式必須先以雜湊函數（hash function）編碼後送出。"
+			},
+			"required": true
+		},
+ 		{
+			"key": "passwd2", 
+	     	"descTx": {
+				"en": "Confirm Password. Required. The client side has to hash & salt the password before sending it out.", 
+	        	"zh": "重複使用者密碼。子端程式必須先以雜湊函數（hash function）編碼後送出。建議子端程式自行比對重複密碼，不需送出到 devapi server 檢查。"
+			}
+		},
+	 	{
+			"key": "dspName", 
+	     	"descTx": {
+				"en": "Display name of this user.", 
+	        	"zh": "使用者暱稱。"
+			}
+		},
+	 	{
+			"key": "fname", 
+	     	"descTx": {
+				"en": "First name.", 
+	        	"zh": "使用者名。"
+			}
+		},
+ 		{
+			"key": "lname", 
+	     	"descTx": {
+				"en": "Last name.", 
+	        	"zh": "使用者姓。"
+			}
+		},
+ 		{
+			"key": "email", 
+	     	"descTx": {
+				"en": "E-mail.", 
+	        	"zh": "使用者電子郵件帳號。若是以 email 認證並啟動帳號，此參數成為必要參數。否則帳號必須是 email。"
+			}
+		},
+ 		{
+			"key": "mobile", 
+	     	"descTx": {
+				"en": "Mobile number.", 
+	        	"zh": "使用者行動電話號碼。若是以簡訊認證並啟動帳號，此參數成為必要參數。否則帳號必須是手機號碼。"
+			}
+		},
+   	 	{
+			"key": "addr", 
+  		 	"descTx": {
+				"en": "User address.", 
+  		        "zh": "使用者地址。"
+			}
+		},
+     	{
+			"key": "aux", 
+		 	"descTx": {
+				"en": "Any additional information. Should be formatted as a JSON string.", 
+				"zh": "任何附加的資訊，以json格式表示"
+			}
+		},
+	 	{
+			"key": "_loc", 
+	     	"descTx": {
+				"en": "Language ID.1: English. 2: Traditional Chinese. The parameter represents the default language of the user. If the parameter is not given, the default language will be the same as the App. ", 
+	        	"zh": "語系識別碼。1: 英文，2: 繁中。這個參數表示使用者的預設語系。若未給，則預設為 App 的語系。"
+			}
+		}
+	],
+	"out": [
+		{
+			"key": "id",
+		 	"descTx": {
+				"en": "Account ID", 
+		     	"zh": "使用者識別碼"
+			}
+		},
+ 	 	{
+			"key": "actID",
+		 	"descTx": {
+				"en": "Account acivation code. If the account has already been activated, this property will be an empty string.", 
+		     	"zh": "帳號啟動碼。若帳號不需啟動，則此欄位值為空字串。"
+			}
+		},
+     	{
+			"key": "actScheme",
+		 	"descTx": {
+				"en": "Account activation scheme. 1: Already activated. 2: Use email to send out the activation letter. 3: Use SMS to send out the activation message.", 
+			   	"zh": "帳號啟動機制。0: 不需認證與啟動， 1: 以 email 認證並啟動， 2: 以簡訊認證並啟動"
+			}
+		}
+	],
+	"token": [
+		{
+			"key": "token",
+			"descTx": {
+				"en": "",
+				"zh": "一個臨時授權碼。如果應用程式的帳號申請機制不需認證，則申請成功後會同時傳回一個有效的 token。若需認證則不會有 token 傳回。"
+			}
+		},
+		{
+			"key": "validTo",
+			"descTx": {
+				"en": "A timestamp (in milliseconds) to show the experiation time of the token.",
+				"zh": "一個 timestamp 記錄 token 的失效時間。"
+			}
+		}
+	]
+}

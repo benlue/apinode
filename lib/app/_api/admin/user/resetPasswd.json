@@ -1,0 +1,36 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "不需識別碼。"
+	},
+	"url": "admin/user/resetPasswd",
+	"descTx": {
+		"en": "Modify password.",
+		"zh": "使用者忘記密碼，由系統重設一組密碼。新設的密碼會以明碼 (clear text) 的方式傳回，以便告知使用者。可能需要建置「濫用阻絕」的機制。"
+	},
+	"query": [
+ 		{
+			"key": "accName", 
+	     	"descTx": {
+				"en": "Old password. Required. The client side has to hash & salt the password before sending it out.", 
+	        	"zh": "要重設密碼的帳號。必要參數。"
+			}
+		},
+		{
+			"key": "length", 
+	     	"descTx": {
+				"en": "Length of the new password. If not specified, the length will be set to 6.", 
+	        	"zh": "密碼長度。預設為六碼。"
+			}
+		}
+	],
+	"out": [
+		{
+			"key": "passwd",
+		 	"descTx": {
+				"en": "User ID", 
+		     	"zh": "新的使用者密碼。"
+			}
+		}
+	]
+}

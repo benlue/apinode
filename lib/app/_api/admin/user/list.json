@@ -1,0 +1,94 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": "admin/user/list",
+	"descTx": {
+		"en": "",
+		"zh": "條列註冊子端程式的使用者。只能條列權限小於查詢者的使用者。支援分頁功能。"
+	},
+	"query": [
+        {
+			"key": "key", 
+         	"descTx": {
+				"en": "",
+        	 	"zh": "搜尋使用者帳號或暱稱的關鍵字。"
+			}
+		},
+        {
+			"key": "_pn", 
+		 	"descTx": {
+				"en": "Specific paging information to show. The initial number of pages is 1 and the default is 1.", 
+			 	"zh": "表示要顯示第幾頁的資訊。頁數從1算起。預設值為1。"
+			}
+		},
+ 		{
+			"key": "_ps", 
+		 	"descTx": {
+				"en": "Set the number of return data each page, the default is 10.", 
+			 	"zh": "設定每頁的回傳筆數。預設值為10。"
+			}
+		}
+	],
+	"out": [
+		{
+			"key": "list", 
+			"descTx": {
+				"en": "User list.", 
+				"zh": "使用者清單"
+			},
+		 	"more": [
+				{
+					"key": "wuID", 
+					"descTx": {
+						"en": "", 
+						"zh": "使用者識別碼。"
+					}
+				},
+				{
+					"key": "accName", 
+					"descTx": {
+						"en": "", 
+						"zh": "使用者帳號"
+					}
+				},
+				{
+					"key": "dspName", 
+					"descTx": {
+						"en": "", 
+						"zh": "使用者暱稱"
+					}
+				},
+				{
+					"key": "roleScore", 
+					"descTx": {
+						"en": "", 
+						"zh": "權限分數"
+					}
+				},
+				{
+					"key": "rCode", 
+					"descTx": {
+						"en": "", 
+						"zh": "權限代碼"
+					}
+				},
+				{
+					"key": "title", 
+					"descTx": {
+						"en": "", 
+						"zh": "權限名稱"
+					}
+				}
+			]
+		},
+		{
+			"key": "entries", 
+			"descTx": {
+				"en": "Number of total data.", 
+				"zh": "資料總筆數。"
+			}
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"id": {
+		"en": "userID, user ID.",
+		"zh": "userID，使用者識別碼。若未給則傳回目前使用者的 profile。"
+	},
+	"url": "admin/user/profile/{userID}",
+	"descTx": {
+		"en": "Returning the user's  public information, such as ID, username, and profile picture. If psnID is not given, the information of this user will be returned.",
+		"zh": "傳回使用者的一些公開資訊，例如識別代碼、顯示名稱、大頭貼等。若沒有給psnID，則回傳目前使用者的資訊。"
+	},
+	"query": [],
+	"out": [
+		{
+			"key": "iconURI",
+		 	"descTx": {
+				"en": "Link to the user profile picture.",
+			   	"zh": "使用者大頭貼的網址。如果回傳的是全路徑（包含http），表示大頭貼儲存在其他的網站上，不可用 @admin/user/icon 讀取。"
+			}
+		},
+ 	 	{
+			"key": "dspName",
+		 	"descTx": {
+				"en": "Display name of the user.",
+		     	"zh": "使用者的顯示名稱或膩稱。"
+			}
+		},
+		{
+			"key": "isGuest",
+		 	"descTx": {
+				"en": "If the user being queried is a guest?", 
+				"zh": "被使用者是否為訪客"
+			}
+		},
+ 	 	{
+			"key": "roleScore",
+		 	"descTx": {
+				"en": "Score of the access role of the user being queried. The asker should have higher access score than the user being queried to see this property.", 
+	     	 	"zh": "權限積分。分數越高表示權限越大。自己或被查詢者的權限小於自己才會顯示此欄位。"
+			}
+		}
+	]
+}

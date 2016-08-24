@@ -1,0 +1,50 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "userID, 使用者識別碼。如果未給使用者識別碼，傳回目前使用者的 icon。"
+	},
+	"url": "admin/user/icon/{userID}",
+	"descTx": {
+		"en": "Return the attachment related to a user. The current type of attachment is the user's profile picture. The API returns the authentic content, not the form data as JSON. ",
+		"zh": "傳回使用者大頭貼。與大多數API不同的是，這個API會傳回實際的圖檔內容，而不是JSON物件。"
+	},
+	"query": [
+	    {
+			"key": "w", 
+	        "descTx": {
+				"en": "The path of attachment. Required. The return value of some APIs such as core/user/view provides path.", 
+	        	"zh": "圖檔寬度。若高度參數未給，則系統會做等比例調整。"
+			}
+		},
+		{
+			"key": "h",
+			"descTx": {
+				"en": "",
+				"zh": "圖檔高度。若寬度參數未給，則系統會做等比例調整。"
+			}
+		},
+		{
+			"key": "maxw",
+			"descTx": {
+				"en": "",
+				"zh": "圖檔的最大寬度。當寬度的參數未給，系統為圖檔做等比例調整時，可用此參數來限制圖檔的最大寬度。"
+			}
+		},
+		{
+			"key": "maxh",
+			"descTx": {
+				"en": "",
+				"zh": "圖檔的最大高度。當高度的參數未給，系統為圖檔做等比例調整時，可用此參數來限制圖檔的最大高度。"
+			}
+		}
+	],
+	"out": [
+	    {
+			"key": "non-json", 
+	        "descTx": {
+				"en": "The API returns the authentic content, not the form data as JSON. The content type can be checked from the http response.", 
+	        	"zh": "這個API傳回的是一個檔案的實際內容，不再是JSON的資料格式。檔案型別可檢查http response中的content-type。"
+			}
+		}
+	]
+}

@@ -1,0 +1,55 @@
+以下解釋 API 文件 (JSON 檔) 的格式
+
+{
+	"id": {
+		"en": "", 
+		"zh": ""
+	},
+	"url": "admin/user/login",
+	"descTx": {
+		"en": "",
+		"zh": ""
+	},
+	"seeAlso": [
+		"app1/rs1/op1", "app2/rs2/op2", ...
+	],
+	"query": [
+        {
+			"key": "name_of_a_parameter", 
+         	"descTx": {
+				"en": "", 
+        	 	"zh": ""
+			},
+			"required": true / false,
+			"default": /* default value, if any */
+		},
+		...
+	],
+	"out": [
+		{
+			"key": "name_of_the_output_property",
+			"descTx": {
+				"en": "",
+				"zh": ""
+			},
+			"type": "obj | array"
+		},
+		...
+	],
+	"token": [
+		{
+			"key": "token",
+			"descTx": {
+				"en": "",
+				"zh": "存取密鑰 (access token)。每個 request 都需要提出有效的存取密鑰才會被准許執行。"
+			}
+		},
+		{
+			"key": "validTo",
+			"descTx": {
+				"en": "A timestamp (in milliseconds) to show the experiation time of the token.",
+				"zh": "一個 timestamp 記錄存取密鑰的失效時間。"
+			}
+		}
+	]
+}

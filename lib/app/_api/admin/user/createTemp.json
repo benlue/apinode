@@ -1,0 +1,94 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": "admin/user/createTemp",
+	"descTx": {
+		"en": "User application. When a new account is created, developers can collect the following information (in the query). Only account and password are the required information. Developers should proactively protect the personal information and privacy when collecting the information. If the account has already been activated, the system will allow users login simultaneously, and returning a token.",
+		"zh": "建立臨時帳號。如果成功，會自動將訪客登入，並回傳token，以便子端程式後續能繼續存取該帳號。"
+	},
+	"query": [
+	 	{
+			"key": "dspName", 
+	     	"descTx": {
+				"en": "Display name of this user.", 
+	        	"zh": "使用者暱稱，會顯示在畫面上。"
+			}
+		},
+	 	{
+			"key": "fname", 
+	     	"descTx": {
+				"en": "First name.", 
+	        	"zh": "使用者名。"
+			}
+		},
+ 		{
+			"key": "lname", 
+	     	"descTx": {
+				"en": "Last name.", 
+	        	"zh": "使用者姓。"
+			}
+		},
+ 		{
+			"key": "email", 
+	     	"descTx": {
+				"en": "E-mail.", 
+	        	"zh": "使用者電子郵件帳號。若是以 email 認證並啟動帳號，此參數成為必要參數。否則帳號必須是 email。"
+			}
+		},
+ 		{
+			"key": "mobile", 
+	     	"descTx": {
+				"en": "Mobile number.", 
+	        	"zh": "使用者行動電話號碼。若是以簡訊認證並啟動帳號，此參數成為必要參數。否則帳號必須是手機號碼。"
+			}
+		},
+   	 	{
+			"key": "addr", 
+  		 	"descTx": {
+				"en": "User address.", 
+  		        "zh": "使用者地址。"
+			}
+		},
+     	{
+			"key": "aux", 
+		 	"descTx": {
+				"en": "Any additional information. Should be formatted as a JSON string.", 
+				"zh": "任何附加的資訊，以json格式表示"
+			}
+		},
+	 	{
+			"key": "_loc", 
+	     	"descTx": {
+				"en": "Language ID.1: English. 2: Traditional Chinese. The parameter represents the default language of the user. If the parameter is not given, the default language will be the same as the App. ", 
+	        	"zh": "語系識別碼。1: 英文，2: 繁中。這個參數表示使用者的預設語系。若未給，則預設為 App 的語系。"
+			}
+		}
+	],
+	"out": [
+		{
+			"key": "id",
+		 	"descTx": {
+				"en": "Account ID", 
+		     	"zh": "使用者識別碼"
+			}
+		}
+	],
+	"token": [
+		{
+			"key": "token",
+			"descTx": {
+				"en": "",
+				"zh": "若臨時帳號建立成功，系統會傳回一個有效的 token。"
+			}
+		},
+		{
+			"key": "validTo",
+			"descTx": {
+				"en": "A timestamp (in milliseconds) to show the experiation time of the token.",
+				"zh": "一個 timestamp 記錄 token 的失效時間。"
+			}
+		}
+	]
+}

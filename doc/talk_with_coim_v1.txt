@@ -1,0 +1,11 @@
+## Guest access
+1. client send appKey to cnode.
+2. cnode forward the request along with the appKey to coim_v1.
+3. coim_v1 return the execution result (and a token?)
+
+## Member access
+1. client issue a token to cnode.
+2. cnode verify the digest. If ok, the random part of the token will be forwared to coim_v1
+
+## coim_v1 returns token
+If coim_v1 return a token, 

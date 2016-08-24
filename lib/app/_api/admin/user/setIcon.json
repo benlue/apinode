@@ -1,0 +1,28 @@
+{
+	"id": {
+		"en": "No identifier.", 
+		"zh": "沒有識別碼。"
+	},
+	"url": " admin/user/setIcon",
+	"descTx": {
+		"en": "Upload photo to COIMOTION.",
+		"zh": "設定使用者大頭貼。"
+	},
+	"query": [
+		{
+			"key": "source", 
+		 	"descTx": {
+				"en": "The endpoint of a graph API. Required.", 
+	       	 	"zh": "照片的實際內容。這個參數和 url 參數二者擇一。"
+			}
+		},
+		{
+			"key": "url", 
+	     	"descTx": {
+				"en": "The HTTP method used to specify the API action.", 
+	       	 	"zh": "所要上傳照片的網址。這個參數和 source 參數二者擇一。"
+			}
+		}
+	],
+	"out": {"en": "No output value.", "zh": "沒有輸出值"}
+}
