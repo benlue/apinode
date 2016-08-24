@@ -21,7 +21,7 @@
 			}
 		}
 	],
-	 "appPath": "/your_project/lib/app",
+	 "appPath": "../app",
 	 "fileRoot": "/your_file_root",
 	 "logDir": "/your_log_directory"
 }

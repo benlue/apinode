@@ -1,0 +1,14 @@
+{
+    "localhost": {
+        "caCode": "admin",
+        "title": "The coServ Design Console",
+        "sitePath": "../node_modules/coserv/www/admin",
+        "locale": "en"
+    },
+    "127.0.0.1": {
+        "caCode": "apinode",
+        "title": "apinode management",
+        "sitePath": "./apinode",
+        "locale": "en"
+    }
+}
