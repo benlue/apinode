@@ -1,0 +1,57 @@
+<%
+var word = _params.word || {},
+	titleColor = _params.titleColor ? "color: "+_params.titleColor+";" : "",
+	descColor = _params.descColor ? "color: "+_params.descColor+";" : "",
+	tableStyle = _params.tableStyle || []
+	;
+
+var doc = _params.doc
+//console.log(JSON.stringify(doc, '', 4))
+
+%>
+<h2 style="<%=titleColor%>"><span class='markdown'><%=doc.url%></span></h2>
+<section id="descTx" style="<%=descColor%>">
+	<span class='markdown'><%=doc.descTx%></span>
+</section>
+<section id="reference">
+	<div style="<%=descColor%>">
+		<%if(doc.seeAlso){%>
+			<%=word.seeAlso || "see also"%>:
+			<%doc.seeAlso.forEach(function(ele){ %>
+			<a href="javascript: <%=ctrl%>.changeDoc('<%=ele%>')"><%=ele%></a>
+			<%});%>
+		<%}%>
+	</div>	
+</section>
+
+<section id="id">
+	<h3 style="<%=titleColor%>"><span class='markdown'><%=word.id || "ID"%></span></h3>
+	<div class='markdown'><%=doc.id%></div>
+</section>
+
+<%if(doc.query){%>
+<section id="args">
+	<h3 style="<%=titleColor%>"><span class='markdown'><%=word.query || "Query"%></span></h3>
+	<div style="<%=descColor%>">
+		<% wcomp('queryTable', '/api/doc/queryTable', {rows: doc.query, word: word, tableStyle: tableStyle}) %>
+	</div>
+</section>
+<%}%>
+
+<%if(doc.out){%>
+<section id="response">
+	<h3 style="<%=titleColor%>"><span class='markdown'><%=word.out || "Out"%></span></h3>
+	<div style="<%=descColor%>">
+		<% wcomp('outTable', '/api/doc/outTable', {rows: doc.out, word: word, tableStyle: tableStyle}) %>
+	</div>
+</section>
+<%}%>
+
+<%if(doc.error){%>
+<section id="errorCode">
+	<h3 style="<%=titleColor%>"><span class='markdown'><%=word.errorCode || "Error code"%></span></h3>
+	<div style="<%=descColor%>">
+		<% wcomp('errorTable', '/api/doc/errorTable', {rows: doc.error, word: word, tableStyle: tableStyle}) %>
+	</div>
+</section>
+<%}%>

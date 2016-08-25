@@ -1,0 +1,19 @@
+#descTx, #reference, #id > div {
+	margin-left: 8px;
+}
+
+#args td:nth-child(2) {
+	text-align: center;
+}
+
+p {
+	margin: 0px;
+}
+
+#reference a {
+	margin-right: 6px;
+}
+
+section {
+	margin-bottom: 60px;
+}

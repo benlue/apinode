@@ -1,0 +1,27 @@
+接受參數：	
+	endpoints：
+		為必要，用來呈現api的樹狀圖。如果有下一階層，則下一階層以json物件形式表示，若無，則給予null。
+
+		例如以下內容：
+		{
+			rootA: {
+				branchA: null,
+				branchB: {
+					branchBA : null,
+				}
+			},
+			rootB: {
+				branchA: null,
+				branchB: null
+			}
+		}
+		可以表示 /rootA/branchA, /rootA/branchB/branchBA, /rootB/branchA, /rootB/branchB
+
+	indent：
+		表示每階層的縮排，單位為px，不給則使用預設值。
+
+	active：
+		表示樹狀圖預設要展開的階層，以路徑形式表示，例如/rootA/branchB
+
+事件：
+	當點選了一個端點後，會呼叫onSelectEndpoint，其附帶的值為完整的api路徑

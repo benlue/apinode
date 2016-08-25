@@ -1,0 +1,27 @@
+<% 
+	var marked = require('marked');
+		word = _params.word,
+		tableStyle = _params.tableStyle;
+%>
+<table class="table <%=tableStyle.join(' ')%>">
+	<thead>
+		<tr>
+			<th style="width:150px;"><%=word.code || "Code"%></th>
+			<th style=""><%=word.description || "Description"%></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%
+		if(Object.keys(_params.rows).length > 0){
+			Object.keys(_params.rows).forEach(function(ele){%>
+			<tr><td><%=ele%></td><td><span class='markdown'><%=_params.rows[ele]%></span></td></tr>
+		<%});%>
+
+		<%} else {%>		
+			<tr>
+				<td style="text-align: center;">-</td>				
+				<td style="text-align: center;">-</td>
+			</tr>
+		<%}%>
+	</tbody>
+</table>

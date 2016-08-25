@@ -1,0 +1,36 @@
+<%	
+	var endpoints = _params.endpoints;
+	var indent = _params.indent >= 0 ? _params.indent : 20;
+	var active = _params.active || ""
+	//console.log(endpoints, '', 4)
+%>
+<nav class="sidebar-nav">
+	<ul class="metismenu" id="menu">		
+		<%for(var ca in endpoints){
+			nextlevel(endpoints[ca], ca, '')
+		};%>
+	</ul>
+</nav>
+
+<% 
+function nextlevel (obj, objName, path) {
+	var level = path.split('/').length - 1;
+	var nextPath = path + '/' + objName;
+	var id = nextPath.replace(/\//g,'_');
+	if(obj == null){
+%>
+	<li><a style="padding-left: <%=(level*25 + 15)+'px'%>"
+		 href="javascript: <%=ctrl%>.selectEndpoint('<%=nextPath%>')"><%=objName%></a></li>
+<%} else {%>
+	<li class="<%=active.startsWith(nextPath) ? 'active' : ''%>">
+		<a href="#" style="padding-left: <%=(level*indent + 15)+'px'%>"><%=objName%><span class="fa arrow"></a>
+		<ul>
+		<%
+			for(var key in obj){
+				nextlevel(obj[key], key, nextPath)
+			}
+		%>
+		</ul>
+		
+	</li>
+<%}}%>

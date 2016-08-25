@@ -1,0 +1,134 @@
+<%
+	var  entries = _params.entries;
+	var  _ps = _params._ps;
+%>
+<div class="dropdown dropup pull-left">
+	<button class="btn btn-purple dropdown-toggle" type="button" id="basic-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		顯示&nbsp;<%=_ps%>&nbsp;筆&nbsp;<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="basic-dropdown">
+		<%
+		if (_ps == 10) {
+		%>
+		<li class="disabled">
+			<a href="javascript: void(0)">10</a>
+		</li>
+		<%
+		} else  {
+		%>
+		<li>
+			<a href="javascript: <%=ctrl%>.changePs(10);">10</a>
+		</li>
+		<%
+		} 
+		%>
+		<%
+		if (_ps == 25) {
+		%>
+		<li class="disabled">
+			<a href="javascript: void(0)">25</a>
+		</li>
+		<%
+		} else  {
+		%>
+		<li>
+			<a href="javascript: <%=ctrl%>.changePs(25);">25</a>
+		</li>
+		<%
+		} 
+		%>
+		<%
+		if (_ps == 50) {
+		%>
+		<li class="disabled">
+			<a href="javascript: void(0)">50</a>
+		</li>
+		<%
+		} else  {
+		%>
+		<li>
+			<a href="javascript: <%=ctrl%>.changePs(50);">50</a>
+		</li>
+		<%
+		} 
+		%>
+	</ul>
+</div>
+<nav class="pull-right">
+	<ul class="pagination">
+		<%
+		if (entries == 0) {
+		%>
+			<li class="disabled">
+				<a href="javascript: void(0)" aria-label="Next">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="javascript: void(0)">1</a>
+			</li>
+			<li class="disabled">
+				<a href="javascript: void(0)" aria-label="Previous">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		<%	
+		} else {
+			var nowPn = _params._pn;
+			var pageNum = Math.ceil(entries / _ps);
+			if (nowPn - 1 == 0) {
+		%>
+		<li class="disabled">
+			<a href="javascript: void(0)" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
+		</li>
+		<%
+			} else {
+				var next = parseInt(nowPn) - 1;
+		%>
+			<li>
+				<a href="javascript: <%=ctrl%>.nextPage(<%=next%>);" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+		<%
+			}
+			for (var i = 1 ; i <= pageNum ; i ++) {
+				if (nowPn == i) {
+		%>
+			<li class="active">
+				<a href="javascript: void(0)"><%=i%></a>
+			</li>
+		<%
+				} else {
+		%>
+					<li >
+						<a href="javascript: <%=ctrl%>.nextPage(<%=i%>);"><%=i%></a>
+					</li>
+		<%
+				}
+			} 
+			if (nowPn == pageNum) {
+		%>
+			<li class="disabled">
+				<a href="javascript: void(0)" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		<%
+			} else {
+				var next = parseInt(nowPn) + 1;
+		%>
+				<li>
+					<a href="javascript: <%=ctrl%>.nextPage(<%=next%>);" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+		<%
+			}
+		}
+		%>
+	</ul>
+</nav>
+<div class="clear" style="margin-bottom: 20px;"></div>
