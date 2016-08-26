@@ -3,19 +3,9 @@
 		{
 			"dbConfig": {
 				"host": "127.0.0.1",
-				"database": "cnode",
-				"user": "xxxx",
-				"password": "xxxx",
-				"supportBigNumbers" : true,
-				"connectionLimit"   : 32
-			}
-		},
-		{
-			"dbConfig": {
-				"host": "127.0.0.1",
-				"database": "coimLog",
-				"user": "xxxx",
-				"password": "xxxx",
+				"database": "apinode",
+				"user": "",
+				"password": "",
 				"supportBigNumbers" : true,
 				"connectionLimit"   : 32
 			}
