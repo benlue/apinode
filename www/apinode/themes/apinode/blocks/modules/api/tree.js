@@ -15,7 +15,7 @@ exports.execute = function(ctx, inData, cb)  {
 	request(opt, (err, res, body) => {
 		if (!err && res.statusCode == 200){
 			var obj = JSON.parse(body);
-			cb({errCode: 0, value: obj});
+			cb(obj);
 		}
 	});
 }
