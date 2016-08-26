@@ -2,3 +2,8 @@
 /js/lib/jquery-2.1.4.min.js
 /js/lib/bootstrap/js/bootstrap.min.js
 /js/wFront.js
+/metisMenu-2.4.0/metisMenu.min.css
+/metisMenu-2.4.0/metisMenu.min.js
+/font-awesome-4.6.1/css/font-awesome.css
+/marked/0.3.5/marked.min.js
+/flag-icon-css/css/flag-icon.min.css

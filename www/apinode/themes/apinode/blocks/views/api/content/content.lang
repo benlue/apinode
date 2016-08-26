@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phrases>
+	<ph id="reference">
+		<zh>文件</zh>
+		<en>Reference</en>
+	</ph>
+	<ph id="try">
+		<zh>測試</zh>
+		<en>Try</en>
+	</ph>
+	<ph id="id">
+		<zh>ID</zh>
+		<en>ID</en>
+	</ph>
+	<ph id="input">
+		<zh>輸入參數</zh>
+		<en>Input</en>
+	</ph>
+	<ph id="return">
+		<zh>回傳值</zh>
+		<en>Return</en>
+	</ph>
+	<ph id="errorCode">
+		<zh>錯誤代碼</zh>
+		<en>Error code</en>
+	</ph>
+	<ph id="seeAlso">
+		<zh>相關</zh>
+		<en>see also</en>
+	</ph>
+	<ph id="parameter">
+		<zh>參數名稱</zh>
+		<en>Parameter</en>
+	</ph>
+	<ph id="required">
+		<zh>必要</zh>
+		<en>Required</en>
+	</ph>
+	<ph id="description">
+		<zh>描述</zh>
+		<en>Description</en>
+	</ph>
+	<ph id="property">
+		<zh>屬性</zh>
+		<en>Property</en>
+	</ph>
+	<ph id="code">
+		<zh>代碼</zh>
+		<en>Code</en>
+	</ph>
+	<ph id="default">
+		<zh>預設值</zh>
+		<en>Default</en>
+	</ph>
+</phrases>

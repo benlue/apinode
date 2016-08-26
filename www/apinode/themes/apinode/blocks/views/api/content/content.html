@@ -1,0 +1,26 @@
+<div>
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="doc">
+			<% wcomp('apiDocComp', '/api/doc', 
+				{ 
+					word: {
+						id: ph.id,
+						query: ph.input,
+						out: ph.return,
+						errorCode: ph.errorCode,
+						seeAlso: ph.seeAlso,
+						parameter: ph.parameter,
+						required: ph.required,
+						default: ph.default,
+						description: ph.description,
+						property: ph.property,
+						code: ph.code
+					},
+					tableStyle: ["table-hover"],
+					doc: value
+				}) %>
+		</div>
+		
+	</div>
+</div>

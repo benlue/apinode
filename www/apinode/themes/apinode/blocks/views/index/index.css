@@ -1,0 +1,19 @@
+.flex-container {
+	display: flex;
+	min-height: 768px;
+}
+
+.menu {	
+	flex: 0 0 250px;
+}
+
+.main{	
+	padding: 10px 0px 0px 10px;
+	flex: 1 1 auto;
+	background-color: #fff;
+}
+
+.sidebar {
+	/*覆寫sb-admin-2 .sidebar*/
+	margin-top: 0px;
+}

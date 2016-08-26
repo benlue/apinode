@@ -1,39 +1,40 @@
-<!DOCTYPE html">
+<!DOCTYPE html>
 <html>
-    <head>
-        <title><%=ctx.title%></title>
-        <meta name="description" content="<%=ctx.description%>" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="shortcut icon" href="../../wcoim/backstage/favicon.ico">
-        <% includeCss(); %>
-        <% includeJs(); %>
+	<head>
+		<title><%=ctx.title%> API文件</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>COIMOTION Developer Console</title>
+		<meta name="description" content="<%= ctx.description%>" />
+		<link rel="shortcut icon" href="../../img/favicon.png">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+		<% includeCss(); %>
+		<% includeJs(); %>
 
-        <style type="text/css">
-          <% css(); %>
-        </style>
-        <script type="text/javascript">
-      	<!--
-      	<% js(); %>
-      	$(document).ready(function() {
-          	$.ajaxSetup ({
-            		// Disable caching of AJAX responses
-            		cache: false
-          	});
-      	   __.initPage();
-      	});
-      	-->
-        </script>
-    </head>
+		<style type="text/css">
+		<% css(); %>
+		</style>
+		<script type="text/javascript">
+		<!--
+		<% js(); %>
+		$(document).ready(function() {
+			$.ajaxSetup ({
+					// Disable caching of AJAX responses
+					cache: false
+			});
+			__.initPage();
+		});
+		-->
+		</script>
+	</head>
 
-    <body>
-        <div id="pgHead">
-           <% block('/head'); %>
+	<body>
+      	<div id="pgHead">
+           <% block('/api/header'); %>
         </div>
         <div id="pgBody">
-            <% block(); %>
+          	<div id="pgContent"><% block(); %></div>
         </div>
-        <div id="pgFooter">
-           <% block('/foot'); %>
-        </div>
-    </body>
+	</div>
+	</body>
 </html>

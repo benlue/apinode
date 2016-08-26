@@ -2,19 +2,16 @@
     "/index": {
         "id": "no"
     },
-    "/head": {
+    "/api/header": {
         "id": "no"
     },
-    "/nav/about": {
-        "id": "no"
+    "/api/tree": {
+    	"id": "no"
     },
-    "/nav/news": {
-        "id": "no"
+    "/api/content": {
+    	"id": "no"
     },
-    "/nav/product": {
-        "id": "no"
-    },
-    "/foot": {
-        "id": "no"
+    "/api/welcome": {
+    	"id": "no"
     }
 }

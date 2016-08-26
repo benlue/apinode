@@ -1,4 +1,8 @@
-<div>
-  	<h1>Bootstrap Navbar Style</h1>
-  	<h4>Home</h4>
+<div class="flex-container">
+	<div class="menu">
+		<%block('apiTree', '/api/tree', {params: {app: bi.query.app, stID:bi.query.stID}})%>
+	</div>
+	<div class="main">
+		<%block('apiDoc', '/api/welcome')%>
+	</div>
 </div>
