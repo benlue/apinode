@@ -1,12 +1,12 @@
 {
   "name": "apinode",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An API server that can greatly reduce the work needed to implment API services. It can also cooperate with other API node to make it a mesh of services.",
   "main": "./apiNode.js",
   "scripts": {
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
   },
-  "repository": "",
+  "repository": "https://github.com/benlue/apinode",
   "keywords": [
     "Node.js",
     "COIMOTION",
