@@ -24,5 +24,10 @@
 			"updateRole": null,
 			"view": null
 		}
+	},
+	"base": {
+		"prescription": {
+			"view": null
+		}
 	}
 }
