@@ -26,8 +26,8 @@ exports.execute = function(ctx, inData, cb)  {
 function recursion(ary, loc){
 	for(idx in ary) {
 		ary[idx].descTx = selLang(ary[idx].descTx, loc);
-		if(!ary[idx].more){
-			recursion(ary[idx].more)
+		if(ary[idx].more){
+			recursion(ary[idx].more, loc)
 		}
 	}
 }
