@@ -33,7 +33,8 @@ function recursion(ary, loc){
 }
 
 
-function getDoc(endpoint, preDoc, cb){
+function getDoc(endpoint, preDoc, cb) {
+	console.log('get doc endpoint: ' + endpoint);
 	var opt = {
 		url: 'http://127.0.0.1:4000' + endpoint,
 		method: 'POST',
