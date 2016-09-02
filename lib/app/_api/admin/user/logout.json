@@ -9,10 +9,7 @@
 		"zh": "登出使用者。登出後，之前因登入而取的的 token 將失效，不能再被使用。另一個新的應用程式存取密鑰(application-scope access token)將會傳回，可用來取代原有的token。"
 	},
 	"query": [],
-	"out": {
-		"en": "No output value.", 
-		"zh": "沒有輸出值"
-	},
+	"out": [],
 	"token": [
 		{
 			"key": "token",
