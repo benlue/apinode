@@ -7,7 +7,12 @@ exports.execute = function(ctx, inData, cb)  {
 		return;
 	}
 	//console.log(JSON.stringify(ctx.bi,'',4));
-	getDoc(inData.endpoint, null, (doc) => {
+	getDoc(inData.endpoint, null, (err, doc) => {
+		if(err){
+			cb(err);
+			return;
+		}
+
 		var loc = ctx.bi.locale;
 
 		doc.id = selLang(doc.id, loc);
@@ -48,14 +53,19 @@ function getDoc(endpoint, preDoc, cb) {
 	
 	request(opt, (err, res, body) => {
 		if (!err && res.statusCode == 200){
-			var doc = JSON.parse(body).value;
+			var obj = JSON.parse(body);
+			if(obj.code != 0) {
+				cb(obj);
+				return;
+			}
+			var doc = obj.value;
 			if(doc.extends){
-				getDoc(cb, doc.extends[0], doc);
+				getDoc(doc.extends[0], doc, cb);
 			} else {
 				if(preDoc){
 					doc = combineDoc(doc, preDoc);
 				}
-				cb(doc);
+				cb(null, doc);
 			}
 		}
 	});

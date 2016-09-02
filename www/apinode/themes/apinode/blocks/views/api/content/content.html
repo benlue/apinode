@@ -1,5 +1,5 @@
 <div>
-	<!-- Tab panes -->
+	<%if(errCode == 0){%>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="doc">
 			<% wcomp('apiDocComp', '/api/doc', 
@@ -21,6 +21,8 @@
 					doc: value
 				}) %>
 		</div>
-		
 	</div>
+	<% } else { %>
+		<%=message%>
+	<% } %>
 </div>
