@@ -1,13 +1,28 @@
 <%	
-	var endpoints = _params.endpoints;
+	var eps = _params.endpoints;
 	var indent = _params.indent >= 0 ? _params.indent : 20;
-	var active = _params.active || ""
-	//console.log(endpoints, '', 4)
+	var active = _params.active || "";
+	//console.log(JSON.stringify(eps), '', 4);
 %>
+<%
+function isString(s) {
+	if (typeof s === 'string' || s instanceof String)
+		return true;
+	else
+		return false;
+}
+%>
+
 <nav class="sidebar-nav">
 	<ul class="metismenu" id="menu">		
-		<%for(var ca in endpoints){
-			nextlevel(endpoints[ca], ca, '')
+		<%for(var i in eps){
+			if(isString(eps[i])){
+				nextlevel(null, eps[i] , '');
+			} else {
+				for(var k in eps[i]){
+					nextlevel(eps[i][k], k, '')
+				}
+			}
 		};%>
 	</ul>
 </nav>
@@ -25,11 +40,16 @@ function nextlevel (obj, objName, path) {
 	<li class="<%=active.startsWith(nextPath) ? 'active' : ''%>">
 		<a href="#" style="padding-left: <%=(level*indent + 15)+'px'%>"><%=objName%><span class="fa arrow"></a>
 		<ul>
-		<%
-			for(var key in obj){
-				nextlevel(obj[key], key, nextPath)
+		<%for(var i in obj){
+			if(isString(obj[i])){
+				nextlevel(null, obj[i] , nextPath);
+			} else {
+				for(var k in obj[i]){
+					nextlevel(obj[i][k], k, nextPath)
+				}
 			}
-		%>
+		};%>
+
 		</ul>
 		
 	</li>

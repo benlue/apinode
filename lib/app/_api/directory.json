@@ -1,33 +1,33 @@
-{
-	"admin": {
-		"app": {
-			"info": null
-		},
-		"token": {
-			"request": null
-		},
-		"user": {
-			"accNameOk": null,
-			"activate": null,
-			"convertTemp": null,
-			"createTemp": null,
-			"icon": null,
-			"list": null,
-			"login": null,
-			"logout": null,
-			"profile": null,
-			"register": null,
-			"resetPasswd": null,
-			"setIcon": null,
-			"update": null,
-			"updatePasswd": null,
-			"updateRole": null,
-			"view": null
-		}
-	},
-	"base": {
-		"prescription": {
-			"view": null
-		}
-	}
-}
+[{
+	"admin": [{
+		"app": [
+			"info"
+		],
+		"token": [
+			"request"
+		],
+		"user": [
+			"accNameOk",
+			"activate",
+			"convertTemp",
+			"createTemp",
+			"icon",
+			"list",
+			"login",
+			"logout",
+			"profile",
+			"register",
+			"resetPasswd",
+			"setIcon",
+			"update",
+			"updatePasswd",
+			"updateRole",
+			"view"
+		]
+	}],
+	"base": [{
+		"prescription": [
+			"view"
+		]
+	}]
+}]
