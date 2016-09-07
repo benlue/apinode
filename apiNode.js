@@ -1,3 +1,8 @@
+/*!
+* apinode
+* authors: Ben Lue
+* Copyright(c) 2015~2016 Gocharm Inc.
+*/
 var  bodyParser = require('body-parser'),
 	 connect = require('connect'),
      http = require('http'),
@@ -8,7 +13,7 @@ var  bodyParser = require('body-parser'),
 	 cors = require('./lib/server/cors.js');
      
 var  uploadPath,
-     serverBase;
+     serverShell;
 
 exports.init = function(config)  {
     // upload files will be saved here before any further processing
@@ -18,8 +23,8 @@ exports.init = function(config)  {
     var  maxSockets = config.maxSockets || 2000;
     http.globalAgent.maxSockets = maxSockets;
 
-    // init serverBase...
-    serverBase = require('./lib/server/serverBase.js')(config);
+    // init serverShell...
+    serverShell = require('./lib/server/serverShell.js')(config);
 };
 
 
@@ -30,7 +35,7 @@ exports.restart = function(port, certPath)  {
 			.use(require('connect-multiparty')({uploadDir: uploadPath}))
 			.use(bodyParser.json())
 			.use(cors())
-			.use(serverBase);
+			.use(serverShell);
 
     if (certPath)  {
         // dealing with SSL certificates...
