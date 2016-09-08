@@ -1,6 +1,6 @@
 {
   "name": "apinode",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An API server that can greatly reduce the work needed to implment API services. It can also cooperate with other API node to make it a mesh of services.",
   "main": "./apiNode.js",
   "scripts": {
