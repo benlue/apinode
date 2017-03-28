@@ -1,6 +1,6 @@
 {
   "name": "apinode",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "An API server that can greatly reduce the work needed to implment API services. It can also cooperate with other API node to make it a mesh of services.",
   "main": "./apiNode.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "newsql": "^0.1.2",
     "request": "^2.58.0",
     "restler": "^3.3.0",
-    "sql-soar": "^1.2.0",
+    "sql-soar": "^1.2.3",
     "xml2js": "^0.4.9"
   },
   "devDependencies": {
