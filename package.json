@@ -1,6 +1,6 @@
 {
   "name": "apinode",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "An API server that can greatly reduce the work needed to implment API services. It can also cooperate with other API node to make it a mesh of services.",
   "main": "./apiNode.js",
   "scripts": {
@@ -16,26 +16,20 @@
   "author": "Ben Lue",
   "readmeFilename": "README.md",
   "dependencies": {
-    "async": "^1.2.0",
+    "async": "^2.5.0",
     "aws-sdk": "^2.1.42",
-    "bluebird": "^2.9.27",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.15.2",
-    "connect": "^3.4.1",
+    "connect": "^3.6.2",
     "connect-multiparty": "^1.2.5",
-    "coserv": "^0.11.1",
+    "coserv": "^0.11.2",
     "gm": "^1.18.1",
-    "mime": "^1.3.4",
+    "mime": "^1.3.6",
     "morgan": "^1.7.0",
     "newsql": "^0.1.2",
     "request": "^2.58.0",
     "restler": "^3.3.0",
-    "sql-soar": "^1.2.3",
+    "sql-soar": "^1.2.4",
     "xml2js": "^0.4.9"
-  },
-  "devDependencies": {
-    "body-parser": "^1.12.4",
-    "connect": "^3.3.5",
-    "morgan": "^1.5.3",
-    "sql-soar": "^1.1.6"
   }
 }
