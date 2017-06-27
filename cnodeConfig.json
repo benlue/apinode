@@ -11,6 +11,10 @@
 			}
 		}
 	],
+	"master": {
+		"host": "",
+		"port": 4010
+	},
 	 "appPath": "../app",
 	 "fileRoot": "/your_file_root",
 	 "logDir": "/your_log_directory"

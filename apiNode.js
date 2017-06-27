@@ -13,7 +13,8 @@ var  bodyParser = require('body-parser'),
 	 cors = require('./lib/server/cors.js');
      
 var  uploadPath,
-     serverShell;
+     serverShell,
+     rpcServer;
 
 exports.init = function(config)  {
     // upload files will be saved here before any further processing
@@ -25,10 +26,25 @@ exports.init = function(config)  {
 
     // init serverShell...
     serverShell = require('./lib/server/serverShell.js')(config);
+
+    // rpc server
+    rpcServer = rpc.server({
+	    process: dispatcher.process,
+	    relay: dispatcher.relay,
+	    broadcast: dispatcher.broadcast
+	});
 };
 
 
-exports.restart = function(port, certPath)  {
+exports.restart = function(portConfig, certPath)  {
+    var  httpPort = 4000,
+         rpcPort = 5000;
+
+    if (port.rpc)  {
+        httpPort = portConfig.http;
+        rpcPort = portConfig.rpc;
+    }
+
     var  app = connect()
 			.use(require('morgan')('dev'))
 			.use(bodyParser.urlencoded({extended: true}))
@@ -67,5 +83,8 @@ exports.restart = function(port, certPath)  {
         https.createServer(options, app).listen(port || 3443);
     }
     else
-        http.createServer(app).listen(port || 4000);
+        http.createServer(app).listen( httpPort );
+
+    if (rpcServer)
+        rpcServer.tcp().listen( rpcPort );
 };

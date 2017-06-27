@@ -41,4 +41,4 @@ The actual API services should be provided by operators. An operator is a node m
         this.answerOk('Hello There!', cb);
     }
 
-The **rt** parameter carries the run-time environment and **cb** is the callback function to indicate an operator has finished its job. Since this is a very short introduction, we'll not touch too many ground. The **apinode** module itself contains a built-in app called "admin" which is under the lib/app/admin direcoty. You can browse through that direcoty and find quite a few operator examples.
+The **rt** parameter carries the run-time environment and **cb** is the callback function to indicate an operator has finished its job. Since this is a very short introduction, we'll not touch too much ground. The **apinode** module itself contains a built-in app called "admin" which is under the lib/app/admin direcoty. You can browse through that direcoty and find quite a few operator examples.
